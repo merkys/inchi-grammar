@@ -1,8 +1,9 @@
-String              ::= prefix formula? connections? h_atoms? tetrahedral?
+String              ::= prefix formula? connections? h_atoms? tetrahedral? stereochemistry?
 formula             ::= "/" elemental ( "." elemental )*
 connections         ::= "/c" graph? ( ";" graph? )*
 h_atoms             ::= "/h" hydrogens? ( ";" hydrogens? )*
 tetrahedral         ::= "/t" tetrahedral_centers? ( ";" tetrahedral_centers? )*
+stereochemistry     ::= "/s" ( "1" | "2" )
 elemental           ::= count? ( c h? b? br? cl? f? rest_elements )
                       | ( b? br? cl? f? h? rest_elements )
 rest_elements       ::= i? mg? n? o? p? s?
